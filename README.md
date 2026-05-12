@@ -22,26 +22,44 @@ FOR WINDOWS
 
 FOR LINUX
 
-              . Update your System
+1. Update your System
 First, make sure your package list is up to date:
 
 Bash
-sudo apt update
+
+               sudo apt update
+
+               
 2. Install System Dependencies
 Some Python libraries (like SpeechRecognition and Pillow) need Linux system tools to work properly:
 
 Bash
-sudo apt install python3-pip python3-tk python3-pil.imagetk portaudio19-dev python3-pyaudio
+
+
+
+
+     sudo apt install python3-pip python3-tk python3-pil.imagetk portaudio19-dev python3-pyaudio
+
+   
+
+
 3. Install the Python Libraries
 Now, use pip to install the core libraries you used in your code:
 
 Bash
-pip install customtkinter pandas pillow SpeechRecognition scikit-learn joblib matplotlib
+
+
+
+     pip install customtkinter pandas pillow SpeechRecognition scikit-learn joblib matplotlib
 4. The Linux "Voice" Fix
 Your current code uses win32com.client for the "Zira" voice, which cannot be installed on Linux. To make Bolt speak on your Linux laptop, you should install pyttsx3:
 
 Bash
-pip install pyttsx3
+
+        pip install pyttsx3
+
+
+        
 Why? pyttsx3 is cross-platform. It will use the Windows voice on Windows and the Linux "espeak" voice on your Xubuntu setup automatically.
 
              
