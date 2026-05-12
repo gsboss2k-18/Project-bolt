@@ -15,15 +15,36 @@ Intelligence: Includes intent classification experiments using scikit-learn (Tfi
 
 Data: Powered by bolt_brain.csv, a customizable knowledge base.
 
-📁 File Structure
-main_gui.py: The central hub/dashboard for navigating between Bolt and other academic tools.
+HOW TO INSTALL DEPENDENCIES:
+FOR WINDOWS
 
-bolt.py: The primary engine handling the chat interface, voice output, and image rendering.
+             pip install customtkinter pandas pillow SpeechRecognition pywin32 scikit-learn joblib matplotlib
 
-bolt_brain.csv: The "Brain" of the project containing verified questions, answers, and image paths.
+FOR LINUX
 
-test bolt.py: Experimental script for testing intent recognition and advanced features.
+              . Update your System
+First, make sure your package list is up to date:
 
+Bash
+sudo apt update
+2. Install System Dependencies
+Some Python libraries (like SpeechRecognition and Pillow) need Linux system tools to work properly:
+
+Bash
+sudo apt install python3-pip python3-tk python3-pil.imagetk portaudio19-dev python3-pyaudio
+3. Install the Python Libraries
+Now, use pip to install the core libraries you used in your code:
+
+Bash
+pip install customtkinter pandas pillow SpeechRecognition scikit-learn joblib matplotlib
+4. The Linux "Voice" Fix
+Your current code uses win32com.client for the "Zira" voice, which cannot be installed on Linux. To make Bolt speak on your Linux laptop, you should install pyttsx3:
+
+Bash
+pip install pyttsx3
+Why? pyttsx3 is cross-platform. It will use the Windows voice on Windows and the Linux "espeak" voice on your Xubuntu setup automatically.
+
+             
 🎯 Key Features
 Zero Hallucination: Responds only with verified data from the knowledge base.
 
