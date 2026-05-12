@@ -62,6 +62,8 @@ Bash
         
 Why? pyttsx3 is cross-platform. It will use the Windows voice on Windows and the Linux "espeak" voice on your Xubuntu setup automatically.
 
+"Note: Try any one of the .py files"
+
              
 🎯 Key Features
 Zero Hallucination: Responds only with verified data from the knowledge base.
