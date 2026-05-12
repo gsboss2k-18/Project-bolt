@@ -22,6 +22,31 @@ FOR WINDOWS
 
 FOR LINUX
 
+Delete these lines in your bolt.py:
+
+Python
+
+
+     import win32com.client
+     speaker = win32com.client.Dispatch("SAPI.SpVoice")
+# ... all the voice selection logic ...
+Replace them with this Linux-friendly version:
+
+Python
+
+    import pyttsx3
+    
+    # Initialize the engine
+     engine = pyttsx3.init()
+
+     def speak(text: str):
+    if text and text.strip():
+        try:
+            engine.say(text)
+            engine.runAndWait()
+        except Exception as e:
+            print("Voice error:", e)
+
 1. Update your System
 First, make sure your package list is up to date:
 
